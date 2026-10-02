@@ -23,33 +23,64 @@
 <body>
 
 <h1>K-IsoTrace 개인정보처리방침</h1>
-<p class="sub">시행일 : 2026년 8월 4일 · 최종 수정일 : 2026년 8월 4일</p>
+<p class="sub">시행일 : 2026년 8월 4일 · 최종 수정일 : 2026년 10월 2일</p>
 
 <div class="box">
   <b>한 줄 요약</b><br>
   K-IsoTrace 는 계정을 만들지 않으며, <b>여러분이 그린 도면은 기기 밖으로 나가지 않습니다.</b>
-  개발자는 여러분의 도면을 볼 수 없습니다. 외부로 나가는 통신은 <b>광고 표시</b>를 위한 것뿐입니다.
+  개발자는 여러분의 도면을 볼 수 없습니다. 이 앱에는 <b>광고가 없습니다.</b>
+  외부로 나가는 통신은 <b>무료 체험 기간 확인 · 이용 통계 · 앱 설정값 받기 · 구독 결제(Google Play)</b>를 위한 것뿐입니다.
 </div>
 
 <h2>1. 개인정보를 처리하는 자</h2>
 <table>
   <tr><th>앱 이름</th><td>K-IsoTrace</td></tr>
-  <tr><th>개발자</th><td>KDW Works (강대원)</td></tr>
+  <tr><th>개발자</th><td>KDW Works (상호 : 케이스케치 · 대표 강대원)</td></tr>
   <tr><th>문의</th><td>kisotraceapp@gmail.com</td></tr>
 </table>
 
-<h2>2. 앱이 직접 수집하는 개인정보 — 없음</h2>
+<h2>2. 앱이 처리하는 정보</h2>
 <p>
-  K-IsoTrace 는 <b>회원가입·로그인 기능이 없습니다.</b> 이름, 전화번호, 이메일, 주소, 사진 등
-  이용자를 식별할 수 있는 정보를 앱이 직접 수집하거나 서버로 보내지 않습니다.
-  개발자는 이용자 정보를 저장하는 서버를 운영하지 않습니다.
+  K-IsoTrace 는 <b>회원가입·로그인 기능이 없습니다.</b> 이름, 전화번호, 이메일, 주소, 사진,
+  도면 내용 등 이용자를 직접 알아볼 수 있는 정보는 수집하지 않습니다.
+  앱이 기기 밖으로 보내는 정보는 아래 표가 전부입니다.
+</p>
+<table>
+  <tr><th>무엇</th><th>왜</th><th>어디로 · 얼마나</th></tr>
+  <tr>
+    <td><b>기기 식별값의 해시</b><br>(기기 ID 를 SHA-256 으로 바꾼 값 · 원래 값은 보내지 않음)<br>+ 처음 사용한 날짜 · 신규/기존 구분</td>
+    <td>무료 체험(30일)·기존 사용자 혜택이 <b>기기 한 대에 한 번</b>만 적용되도록</td>
+    <td>Google Firebase(Cloud Firestore) · 체험 중복 방지를 위해 보관하며, 문의 메일로 삭제를 요청할 수 있습니다</td>
+  </tr>
+  <tr>
+    <td><b>앱 이용 통계</b><br>(앱 설치 식별값, 화면·기능 사용 횟수, 기기 모델·OS·언어·국가 수준 위치)</td>
+    <td>어떤 기능이 쓰이는지 파악해 앱을 개선하기 위해</td>
+    <td>Google Analytics for Firebase · Google 의 보관 정책을 따릅니다. 개발자는 개인을 알아볼 수 없는 집계 형태로만 봅니다</td>
+  </tr>
+  <tr>
+    <td><b>앱 설정값 요청 정보</b><br>(앱 설치 식별값, 국가·언어·OS 버전)</td>
+    <td>앱 업데이트 없이 체험 기간 등 설정값을 받기 위해</td>
+    <td>Google Firebase(Remote Config)</td>
+  </tr>
+  <tr>
+    <td><b>구독 결제</b></td>
+    <td>PRO 구독(월 결제) 처리</td>
+    <td><b>Google Play 가 직접 처리</b>합니다. 카드 번호 등 결제 정보는 개발자에게 전달되지 않으며, 앱은 구독 중인지 여부만 확인합니다</td>
+  </tr>
+</table>
+<p>
+  위 정보는 모두 <b>암호화된 통신(HTTPS)</b>으로 전송되며, 판매하거나 제3자에게 제공하지 않습니다
+  (Google 이 서비스 제공을 위해 처리하는 경우 제외).
+  자세한 내용은 <a href="https://firebase.google.com/support/privacy">Firebase 개인정보 보호</a> 및
+  <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 참고하시기 바랍니다.
 </p>
 
 <h2>3. 이용자가 만든 자료(도면)의 보관</h2>
 <table>
   <tr><th>무엇</th><th>어디에 저장되나</th><th>개발자가 볼 수 있나</th></tr>
   <tr><td>도면·시트·설정</td><td>기기 내부의 앱 저장 공간</td><td><b>볼 수 없음</b></td></tr>
-  <tr><td>내보낸 파일(PDF · <code>.iso.json</code> · 이미지)</td><td>기기의 다운로드 폴더</td><td><b>볼 수 없음</b></td></tr>
+  <tr><td>내보낸 파일(PDF · <code>.iso.json</code> · 엑셀 · 이미지)</td><td>기기의 다운로드 폴더</td><td><b>볼 수 없음</b></td></tr>
+  <tr><td>진단 기록</td><td>기기 안 · 이용자가 직접 보내기를 눌렀을 때만 파일로 전달</td><td>이용자가 보낸 경우에만</td></tr>
 </table>
 <p>
   도면 파일을 카카오톡·이메일 등으로 보내는 것은 <b>이용자가 직접 선택한 앱</b>이 처리하며,
@@ -58,38 +89,16 @@
   다운로드 폴더에 내보낸 파일은 기기에 남으므로 필요 시 직접 삭제하시면 됩니다.
 </p>
 
-<h2>4. 광고 — Google AdMob</h2>
+<h2>4. 광고</h2>
 <p>
-  이 앱은 무료로 제공되며 운영을 위해 <b>Google AdMob</b> 광고를 표시합니다.
-  광고를 표시하고 부정 클릭을 방지하기 위해 Google 및 그 파트너가 다음과 같은 정보를 수집·이용할 수 있습니다.
-</p>
-<table>
-  <tr><th>항목</th><th>예</th></tr>
-  <tr><td>광고 식별자</td><td>Android 광고 ID(AAID)</td></tr>
-  <tr><td>기기 정보</td><td>기기 모델, 운영체제 버전, 언어, 화면 크기</td></tr>
-  <tr><td>대략적 위치</td><td>IP 주소로 추정하는 국가·지역 수준(정밀 위치 아님)</td></tr>
-  <tr><td>앱 이용 정보</td><td>광고가 표시된 횟수, 클릭 여부</td></tr>
-</table>
-<p>
-  이 정보는 <b>Google 이 자체 정책에 따라 처리</b>하며, 개발자는 개별 이용자를 식별할 수 있는 형태로
-  이 정보를 받지 않습니다. 자세한 내용은
-  <a href="https://policies.google.com/technologies/partner-sites">Google 파트너 사이트·앱에서의 데이터 이용</a> 및
-  <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 참고하시기 바랍니다.
-</p>
-<p>
-  <b>맞춤 광고를 원하지 않으시면</b> 기기에서 다음과 같이 설정할 수 있습니다.<br>
-  <code>설정 ▸ Google ▸ 광고 ▸ 광고 ID 삭제 / 맞춤 광고 선택 해제</code>
-</p>
-<p>
-  광고를 표시할 수 없는 환경(예: 통신이 되지 않는 현장)에서도
-  <b>앱의 모든 기능은 그대로 사용할 수 있습니다.</b> 광고 시청이 기능 이용 조건이 되지 않습니다.
+  2026년 10월 업데이트(버전 38)부터 <b>이 앱은 광고를 표시하지 않으며, 광고 식별자(광고 ID)를 사용하지 않습니다.</b>
 </p>
 
 <h2>5. 앱이 요구하는 권한</h2>
 <table>
   <tr><th>권한</th><th>왜 필요한가</th></tr>
-  <tr><td>인터넷(INTERNET)</td><td>광고를 불러오기 위함. 도면 데이터 전송에는 사용하지 않습니다.</td></tr>
-  <tr><td>광고 ID(AD_ID)</td><td>Android 13 이상에서 광고를 표시하기 위함.</td></tr>
+  <tr><td>인터넷(INTERNET)</td><td>위 2항의 체험 기간 확인·이용 통계·설정값·구독 결제를 위함. 도면 데이터 전송에는 사용하지 않습니다.</td></tr>
+  <tr><td>결제(Google Play 결제)</td><td>PRO 구독을 위함.</td></tr>
   <tr><td>저장소 쓰기(Android 9 이하)</td><td>PDF·도면 파일을 다운로드 폴더에 저장하기 위함.</td></tr>
 </table>
 <p>이 앱은 <b>위치·카메라·연락처·마이크·통화기록 권한을 요구하지 않습니다.</b></p>
@@ -102,10 +111,25 @@
 
 <h2>7. 이용자의 권리</h2>
 <p>
-  앱이 개인정보를 수집·보관하지 않으므로 열람·정정·삭제를 요청할 대상 정보가 없습니다.
   기기에 저장된 도면은 <b>이용자가 앱 안에서 직접 삭제</b>하거나 앱을 삭제하여 지울 수 있습니다.
-  광고 식별자에 관한 권리는 위 4항의 기기 설정으로 행사할 수 있습니다.
+  2항의 체험 기록(기기 식별값의 해시)의 삭제를 원하시면 아래 문의 메일로 요청해 주십시오.
+  이용 통계는 Google 의 정책에 따라 처리됩니다.
+  구독 해지는 <code>Google Play 스토어 ▸ 프로필 ▸ 결제 및 정기 결제</code>에서 언제든지 할 수 있습니다.
 </p>
+
+<h2 id="delete">데이터 삭제 요청 방법 (K-IsoTrace · KDW Works)</h2>
+<ol>
+  <li><b>kisotraceapp@gmail.com</b> 으로 메일을 보냅니다. 제목 : <code>K-IsoTrace 데이터 삭제 요청</code></li>
+  <li>본문에 사용하는 <b>휴대폰 모델명</b>과 <b>앱을 처음 설치한 대략의 날짜</b>를 적습니다. (계정이 없으므로 기기 기록을 찾기 위해서입니다)</li>
+  <li>요청을 받은 날부터 <b>30일 안에</b> 처리하고 메일로 알려 드립니다.</li>
+</ol>
+<table>
+  <tr><th>무엇</th><th>삭제 / 보관</th></tr>
+  <tr><td>체험 기록(기기 식별값의 해시 · 처음 사용한 날짜 · 신규/기존 구분)</td><td><b>삭제합니다.</b> 삭제 후에는 체험 기간이 다시 계산될 수 있습니다</td></tr>
+  <tr><td>이용 통계(Google Analytics for Firebase)</td><td>개인을 알아볼 수 없는 형태로 Google 이 보관하며, <b>최대 14개월</b> 뒤 자동 삭제됩니다</td></tr>
+  <tr><td>구독 결제 기록</td><td>Google Play 가 보관합니다(법정 보관 기간). 구독 해지는 Google Play 스토어에서 합니다</td></tr>
+  <tr><td>도면·설정</td><td>기기 안에만 있습니다. 앱 안에서 지우거나 앱을 삭제하면 지워집니다</td></tr>
+</table>
 
 <h2>8. 방침의 변경</h2>
 <p>
@@ -119,33 +143,64 @@
 <hr class="big">
 
 <h1>K-IsoTrace Privacy Policy</h1>
-<p class="sub">Effective : August 4, 2026 · Last updated : August 4, 2026</p>
+<p class="sub">Effective : August 4, 2026 · Last updated : October 2, 2026</p>
 
 <div class="box">
   <b>In one line</b><br>
   K-IsoTrace has no user accounts, and <b>the drawings you create never leave your device.</b>
-  The developer cannot see them. The only outbound traffic is for <b>serving ads</b>.
+  The developer cannot see them. The app <b>shows no ads.</b>
+  Outbound traffic is used only for <b>checking the free trial, usage statistics, receiving app settings, and subscription payments (Google Play)</b>.
 </div>
 
 <h2>1. Who processes your data</h2>
 <table>
   <tr><th>App</th><td>K-IsoTrace</td></tr>
-  <tr><th>Developer</th><td>KDW Works (Daewon Kang)</td></tr>
+  <tr><th>Developer</th><td>KDW Works (business name: 케이스케치 · owner Daewon Kang)</td></tr>
   <tr><th>Contact</th><td>kisotraceapp@gmail.com</td></tr>
 </table>
 
-<h2>2. Data collected by the app itself — none</h2>
+<h2>2. Information the app processes</h2>
 <p>
-  K-IsoTrace has <b>no sign-up or login</b>. It does not collect or transmit your name,
-  phone number, email address, postal address, photos, or any other identifying information.
-  The developer operates no server that stores user data.
+  K-IsoTrace has <b>no sign-up or login</b>. It does not collect your name, phone number, email address,
+  postal address, photos, or the content of your drawings.
+  The table below is everything the app sends off the device.
+</p>
+<table>
+  <tr><th>What</th><th>Why</th><th>Where · how long</th></tr>
+  <tr>
+    <td><b>A hash of the device identifier</b><br>(SHA-256 of the device ID; the original value is never sent)<br>+ first-use date · new/existing user flag</td>
+    <td>So the free trial (30 days) and the existing-user benefit apply <b>once per device</b></td>
+    <td>Google Firebase (Cloud Firestore) · kept to prevent repeated trials; you may request deletion by email</td>
+  </tr>
+  <tr>
+    <td><b>Usage statistics</b><br>(app installation ID, screen/feature usage counts, device model, OS, language, country-level location)</td>
+    <td>To understand which features are used and improve the app</td>
+    <td>Google Analytics for Firebase · retained under Google's policies; the developer sees aggregated data only</td>
+  </tr>
+  <tr>
+    <td><b>Settings request data</b><br>(app installation ID, country, language, OS version)</td>
+    <td>To receive settings such as the trial length without an app update</td>
+    <td>Google Firebase (Remote Config)</td>
+  </tr>
+  <tr>
+    <td><b>Subscription payments</b></td>
+    <td>Processing the PRO subscription (monthly)</td>
+    <td><b>Handled directly by Google Play.</b> Card numbers and other payment details are never passed to the developer; the app only checks whether a subscription is active</td>
+  </tr>
+</table>
+<p>
+  All of the above is sent over <b>encrypted connections (HTTPS)</b> and is never sold or shared with third parties
+  (other than processing by Google to provide these services). See
+  <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a> and the
+  <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
 </p>
 
 <h2>3. Where your drawings are stored</h2>
 <table>
   <tr><th>What</th><th>Where</th><th>Can the developer see it?</th></tr>
   <tr><td>Drawings, sheets, settings</td><td>App storage on your device</td><td><b>No</b></td></tr>
-  <tr><td>Exported files (PDF, <code>.iso.json</code>, images)</td><td>Your device's Downloads folder</td><td><b>No</b></td></tr>
+  <tr><td>Exported files (PDF, <code>.iso.json</code>, Excel, images)</td><td>Your device's Downloads folder</td><td><b>No</b></td></tr>
+  <tr><td>Diagnostic log</td><td>On the device; sent as a file only when you choose to send it</td><td>Only if you send it</td></tr>
 </table>
 <p>
   Sending a file through a messenger or email is handled by <b>the app you choose</b>;
@@ -154,38 +209,16 @@
   Files already exported to Downloads remain on the device and can be deleted manually.
 </p>
 
-<h2>4. Advertising — Google AdMob</h2>
+<h2>4. Advertising</h2>
 <p>
-  The app is free and shows <b>Google AdMob</b> ads to support development.
-  To serve ads and prevent invalid activity, Google and its partners may collect and use:
-</p>
-<table>
-  <tr><th>Category</th><th>Examples</th></tr>
-  <tr><td>Advertising identifier</td><td>Android Advertising ID (AAID)</td></tr>
-  <tr><td>Device information</td><td>Model, OS version, language, screen size</td></tr>
-  <tr><td>Approximate location</td><td>Country/region inferred from IP (not precise location)</td></tr>
-  <tr><td>App usage</td><td>Ad impressions and clicks</td></tr>
-</table>
-<p>
-  This data is <b>processed by Google under its own policies</b>; the developer does not receive it
-  in a form that identifies an individual user. See
-  <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a> and the
-  <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
-</p>
-<p>
-  <b>To opt out of personalised ads</b>, use your device settings:<br>
-  <code>Settings ▸ Google ▸ Ads ▸ Delete advertising ID / Opt out of Ads Personalisation</code>
-</p>
-<p>
-  Where ads cannot be loaded (for example, a job site with no signal),
-  <b>every feature of the app still works.</b> Watching an ad is never a condition of use.
+  Since the October 2026 update (version 38), <b>the app shows no ads and does not use the advertising identifier (Advertising ID).</b>
 </p>
 
 <h2>5. Permissions</h2>
 <table>
   <tr><th>Permission</th><th>Why</th></tr>
-  <tr><td>INTERNET</td><td>To load ads. Not used to transmit your drawings.</td></tr>
-  <tr><td>AD_ID</td><td>Required to show ads on Android 13 and above.</td></tr>
+  <tr><td>INTERNET</td><td>For the trial check, usage statistics, settings, and subscription payments in section 2. Not used to transmit your drawings.</td></tr>
+  <tr><td>Billing (Google Play Billing)</td><td>For the PRO subscription.</td></tr>
   <tr><td>Storage write (Android 9 and below)</td><td>To save PDFs and drawing files to Downloads.</td></tr>
 </table>
 <p>The app does <b>not</b> request location, camera, contacts, microphone, or call-log permissions.</p>
@@ -198,10 +231,25 @@
 
 <h2>7. Your rights</h2>
 <p>
-  Because the app collects and stores no personal data, there is no record to access, correct, or delete.
   Drawings held on your device can be <b>deleted inside the app</b> or by uninstalling it.
-  Rights relating to the advertising identifier can be exercised through the device settings above.
+  To delete the trial record (the hash of the device identifier) in section 2, email us at the address below.
+  Usage statistics are handled under Google's policies.
+  You can cancel the subscription at any time in <code>Google Play Store ▸ Profile ▸ Payments &amp; subscriptions</code>.
 </p>
+
+<h2 id="delete-en">How to request data deletion (K-IsoTrace · KDW Works)</h2>
+<ol>
+  <li>Email <b>kisotraceapp@gmail.com</b> with the subject <code>K-IsoTrace data deletion request</code>.</li>
+  <li>Include your <b>phone model</b> and the <b>approximate date you first installed the app</b> (there are no accounts, so this helps us find the device record).</li>
+  <li>We will process the request <b>within 30 days</b> and confirm by email.</li>
+</ol>
+<table>
+  <tr><th>What</th><th>Deleted / retained</th></tr>
+  <tr><td>Trial record (hash of device identifier · first-use date · new/existing flag)</td><td><b>Deleted.</b> Your trial period may be recalculated afterwards</td></tr>
+  <tr><td>Usage statistics (Google Analytics for Firebase)</td><td>Kept by Google in a form that does not identify you, automatically deleted after <b>at most 14 months</b></td></tr>
+  <tr><td>Subscription payment records</td><td>Kept by Google Play (legal retention). Cancel subscriptions in the Google Play Store</td></tr>
+  <tr><td>Drawings and settings</td><td>Only on your device. Delete them in the app or uninstall the app</td></tr>
+</table>
 
 <h2>8. Changes</h2>
 <p>
